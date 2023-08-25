@@ -1,0 +1,39 @@
+﻿<Window x:Class="WpfAvicomInternTest.Views.SetManagerView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAvicomInternTest.Views"
+        xmlns:vm="clr-namespace:WpfAvicomInternTest.ViewModels"
+        d:DataContext="{d:DesignInstance vm:SetManagerViewModel}"
+        mc:Ignorable="d"
+        Title="SetManagerView" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="50"/>
+        </Grid.ColumnDefinitions>
+        
+        <Label Grid.Row="0" Grid.Column="1" Content="Name" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Height="30" Text="{Binding Name}" Width="200" VerticalAlignment="Center" HorizontalAlignment="Center" />
+
+        <DockPanel Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" Height="Auto">
+            <UniformGrid DockPanel.Dock="Bottom" >
+                <Button Content="OK" Margin="20" IsDefault="True"
+                        Command="{Binding CloseDialogCommand}"
+                        CommandParameter="True"/>
+                <Button Content="Cancel" Margin="20" IsCancel="True"
+                        Command="{Binding CloseDialogCommand}"
+                        CommandParameter="False"/>
+            </UniformGrid>
+        </DockPanel>
+
+    </Grid>
+</Window>

@@ -9,7 +9,7 @@ namespace WpfAvicomInternTest.Models
 	/// <summary>
 	/// Тип клиента – физическое или юридическое лицо.
 	/// </summary>
-	enum ClientType
+	public enum ClientType
 	{
 		Natural,
 		Legal
@@ -18,7 +18,7 @@ namespace WpfAvicomInternTest.Models
 	/// <summary>
 	/// Есть статус клиента (ClientStatus), принимает значения: Ключевой клиент, Обычный клиент.
 	/// </summary>
-	enum ClientStatus
+	public enum ClientStatus
 	{
 		KeyClient,
 		OrdinaryClient
@@ -27,7 +27,7 @@ namespace WpfAvicomInternTest.Models
 	/// <summary>
 	/// Тип (подписка или постоянная лицензия)
 	/// </summary>
-	enum ProductType
+	public enum ProductType
 	{
 		Subscription,
 		ConstantLicense
@@ -36,7 +36,7 @@ namespace WpfAvicomInternTest.Models
 	/// <summary>
 	/// Срок подписки (месяц / квартал / год)
 	/// </summary>
-	enum ProductDuration
+	public enum ProductDuration
 	{
 		Day,
 		Quarter,

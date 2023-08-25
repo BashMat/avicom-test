@@ -10,10 +10,10 @@ namespace WpfAvicomInternTest.Models
 	/// Есть менеджер (Manager) с атрибутами: Имя
 	/// Один менеджер ведет нескольких клиентов
 	/// </summary>
-	internal class Manager
+	public class Manager
 	{
 		public int Id { get; set; }
 		public string Name { get; set; } = string.Empty;
-		public List<Client> Clients { get; set; } = null; 
+		public List<Client> Clients { get; set; } = new(); 
 	}
 }

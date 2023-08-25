@@ -14,17 +14,16 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WpfAvicomInternTest.ViewModels;
 
-namespace WpfAvicomInternTest
+namespace WpfAvicomInternTest.Views
 {
 	/// <summary>
-	/// Interaction logic for MainWindow.xaml
+	/// Interaction logic for ManagersView.xaml
 	/// </summary>
-	public partial class MainWindow : Window
+	public partial class ManagersView : UserControl
 	{
-		public MainWindow()
+		public ManagersView()
 		{
 			InitializeComponent();
-			DataContext = new MainViewModel();
 		}
 	}
 }

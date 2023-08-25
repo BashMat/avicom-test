@@ -2,8 +2,18 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:WpfAvicomInternTest"
+             xmlns:views="clr-namespace:WpfAvicomInternTest.Views"
+             xmlns:viewmodels="clr-namespace:WpfAvicomInternTest.ViewModels"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <DataTemplate DataType="{x:Type viewmodels:ClientsViewModel}">
+            <views:ClientsView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodels:ManagersViewModel}">
+            <views:ManagersView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodels:ProductsViewModel}">
+            <views:ProductsView/>
+        </DataTemplate>
     </Application.Resources>
 </Application>

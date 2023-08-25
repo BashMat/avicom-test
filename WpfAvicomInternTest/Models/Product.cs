@@ -12,13 +12,14 @@ namespace WpfAvicomInternTest.Models
 	/// Есть Товар (Product) с атрибутами: Название, Цена, Тип(подписка или постоянная лицензия),
 	/// Срок подписки(месяц / квартал / год)
 	/// </summary>
-	internal class Product
+	public class Product
 	{
 		public int Id { get; set; }
 		public string Name { get; set; } = string.Empty;
 		public decimal Price { get; set; }
 		public ProductType Type { get; set; }
-		public DateTime CreatedDate { get; set; }
 		public ProductDuration Duration { get; set; }
+		List<Client> clients { get; set; } = new();
+		List<ClientProduct> clientProducts { get; set; } = new();
 	}
 }

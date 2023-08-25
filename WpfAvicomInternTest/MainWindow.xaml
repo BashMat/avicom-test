@@ -7,6 +7,17 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
 
+        <ContentControl Content="{Binding SelectedViewModel}"/>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Margin="10" Width="200" Content="Clients" Command="{Binding NavigateCommand}" CommandParameter="Clients"/>
+            <Button Margin="10" Width="200" Content="Managers" Command="{Binding NavigateCommand}" CommandParameter="Managers"/>
+            <Button Margin="10" Width="200" Content="Products" Command="{Binding NavigateCommand}" CommandParameter="Products"/>
+        </StackPanel>
     </Grid>
 </Window>
